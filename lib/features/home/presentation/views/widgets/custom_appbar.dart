@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomAppBarWidget extends StatelessWidget {
@@ -7,7 +6,7 @@ class CustomAppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 30),
+      padding: const EdgeInsets.only(top: 40, bottom: 20,left: 22,right: 22),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
