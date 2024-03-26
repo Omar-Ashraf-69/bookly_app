@@ -1,12 +1,9 @@
-import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
-import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_list_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -49,10 +46,10 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.zero,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: 10,
-      itemBuilder: (context, index) => Padding(
-        padding: const EdgeInsets.only(bottom: 20.0),
+      itemBuilder: (context, index) => const Padding(
+        padding: EdgeInsets.only(bottom: 20.0),
         child: BestSellerListViewItem(),
       ),
     );

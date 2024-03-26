@@ -46,7 +46,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       maxLines: 2,
                     ),
                     const SizedBox(height: 3),
-                    Text("Thim. Crost", style: Styles.textStyle14),
+                    const Text("Thim. Crost", style: Styles.textStyle14),
                     const SizedBox(height: 3),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,7 +57,7 @@ class BestSellerListViewItem extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        BookRatingWidget(),
+                        const BookRatingWidget(),
                       ],
                     ),
                   ],
