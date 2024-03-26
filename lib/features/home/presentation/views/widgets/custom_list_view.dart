@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomListView extends StatelessWidget {
@@ -14,25 +15,9 @@ class CustomListView extends StatelessWidget {
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 10,
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.39,
-              child: AspectRatio(
-                aspectRatio: 1 / 2,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        'assets/images/test_image.png',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+          itemBuilder: (context, index) =>const Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 5.0),
+            child: CustomBookImage(),
           ),
         ),
       ),
