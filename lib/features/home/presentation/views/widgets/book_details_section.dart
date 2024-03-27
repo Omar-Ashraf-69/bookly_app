@@ -7,22 +7,26 @@ import 'package:bookly/features/home/presentation/views/widgets/custom_book_imag
 import 'package:flutter/material.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
-
+  const BookDetailsSection({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         const CustomAppBar(),
-        const CustomBookImage(
-          imageUrl: 'http://books.google.com/books/content?id=JTdUXI9fz2kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.27,
+          child: CustomBookImage(
+            imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? '',
+          ),
         ),
         const SizedBox(
           height: 43,
         ),
-        const Text(
-          "The Jungle Book",
+        Text(
+          book.volumeInfo.title!,
           style: Styles.textStyle30,
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 6,
@@ -30,7 +34,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: 0.7,
           child: Text(
-            "Rudyard Kipling",
+            book.volumeInfo.authors![0],
             style: Styles.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,
@@ -40,9 +44,10 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 18,
         ),
-        // const BookRatingWidget(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        // ),
+        BookRatingWidget(
+          rate: book.volumeInfo,
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
         const SizedBox(
           height: 30,
         ),

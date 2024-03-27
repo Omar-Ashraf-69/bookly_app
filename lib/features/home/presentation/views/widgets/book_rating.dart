@@ -26,7 +26,8 @@ class BookRatingWidget extends StatelessWidget {
         ),
         Opacity(
           opacity: 0.5,
-          child: Text(rate.ratingsCount ?? '(0)', style: Styles.textStyle14),
+          child: Text('(${rate.ratingsCount})' ?? '(0)',
+              style: Styles.textStyle14),
         ),
       ],
     );
