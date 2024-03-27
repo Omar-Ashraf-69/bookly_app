@@ -13,7 +13,9 @@ class BookDetailsSection extends StatelessWidget {
     return Column(
       children: [
         const CustomAppBar(),
-        const CustomBookImage(),
+        const CustomBookImage(
+          imageUrl: 'http://books.google.com/books/content?id=JTdUXI9fz2kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+        ),
         const SizedBox(
           height: 43,
         ),

@@ -1,16 +1,16 @@
 import 'package:equatable/equatable.dart';
 
 class ImageLinks extends Equatable {
-  final String? smallThumbnail;
-  final String? thumbnail;
+  final String smallThumbnail;
+  final String thumbnail;
   final String? small;
   final String? medium;
   final String? large;
   final String? extraLarge;
 
   const ImageLinks({
-    this.smallThumbnail,
-    this.thumbnail,
+    required this.smallThumbnail,
+    required this.thumbnail,
     this.small,
     this.medium,
     this.large,
@@ -18,8 +18,8 @@ class ImageLinks extends Equatable {
   });
 
   factory ImageLinks.fromJson(Map<String, dynamic> json) => ImageLinks(
-        smallThumbnail: json['smallThumbnail'] as String?,
-        thumbnail: json['thumbnail'] as String?,
+        smallThumbnail: json['smallThumbnail'] as String,
+        thumbnail: json['thumbnail'] as String,
         small: json['small'] as String?,
         medium: json['medium'] as String?,
         large: json['large'] as String?,
