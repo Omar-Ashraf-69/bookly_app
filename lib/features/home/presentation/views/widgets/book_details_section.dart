@@ -1,4 +1,3 @@
-
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_actions.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
@@ -14,37 +13,38 @@ class BookDetailsSection extends StatelessWidget {
     return Column(
       children: [
         const CustomAppBar(),
-              const CustomBookImage(),
-              const SizedBox(
-                height: 43,
-              ),
-              const Text(
-                "The Jungle Book",
-                style: Styles.textStyle30,
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              Opacity(
-                opacity: 0.7,
-                child: Text(
-                  "Rudyard Kipling",
-                  style: Styles.textStyle18.copyWith(
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 18,
-              ),
-              const BookRatingWidget(
-                mainAxisAlignment: MainAxisAlignment.center,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const BookActions(),
-    ],);
+        const CustomBookImage(),
+        const SizedBox(
+          height: 43,
+        ),
+        const Text(
+          "The Jungle Book",
+          style: Styles.textStyle30,
+        ),
+        const SizedBox(
+          height: 6,
+        ),
+        Opacity(
+          opacity: 0.7,
+          child: Text(
+            "Rudyard Kipling",
+            style: Styles.textStyle18.copyWith(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 18,
+        ),
+        const BookRatingWidget(
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        const BookActions(),
+      ],
+    );
   }
 }
