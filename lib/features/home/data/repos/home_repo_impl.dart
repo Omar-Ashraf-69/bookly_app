@@ -33,6 +33,8 @@ class HomeRepoImpl extends HomeRepo {
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchFeauturedBooks() async{
+      //https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:cooking
+
     try {
       var data = await apiService.get(
           endpoint:
