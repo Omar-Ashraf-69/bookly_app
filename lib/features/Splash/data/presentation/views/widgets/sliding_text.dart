@@ -15,12 +15,12 @@ class SlidingText extends StatelessWidget {
         builder: (context, _) {
           return SlideTransition(
             position: animation,
-            child: Text(
+            child:const Text(
               'Bookly',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w500,
-                color: Theme.of(context).primaryColor,
+                color: Colors.white,
               ),
             ),
           );

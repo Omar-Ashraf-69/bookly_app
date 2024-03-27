@@ -28,7 +28,7 @@ class BestSellerListItem extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: CachedNetworkImage(
-                    imageUrl: book.volumeInfo.imageLinks.thumbnail,
+                    imageUrl: book.volumeInfo.imageLinks?.thumbnail??'',
                     fit: BoxFit.cover,
                     placeholder: (context, url) => const Center(
                       child: CircularProgressIndicator(),

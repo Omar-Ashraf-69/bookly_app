@@ -27,7 +27,7 @@ class CustomListView extends StatelessWidget {
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5.0),
                 child: CustomBookImage(
-                  imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                  imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail??'',
                 ),
               ),
             ),
