@@ -15,7 +15,7 @@ class HomeRepoImpl extends HomeRepo {
     try {
       var data = await apiService.get(
           endpoint:
-              'volumes?Sorting=newest&Filtering=free-ebooks&q=subject:cooking');
+              'volumes?Sorting=newest&Filtering=free-ebooks&q=subject:programming');
 
       List<BookModel> books = [];
       for (var item in data['items']) {
@@ -32,13 +32,12 @@ class HomeRepoImpl extends HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeauturedBooks() async{
-      //https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:cooking
+  Future<Either<Failure, List<BookModel>>> fetchFeauturedBooks() async {
+    //https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=subject:cooking
 
     try {
       var data = await apiService.get(
-          endpoint:
-              'volumes?Filtering=free-ebooks&q=subject:cooking');
+          endpoint: 'volumes?Filtering=free-ebooks&q=subject:programming');
 
       List<BookModel> books = [];
       for (var item in data['items']) {
