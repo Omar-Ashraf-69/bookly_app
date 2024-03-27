@@ -5,8 +5,8 @@ import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BestSellerListItem extends StatelessWidget {
+  const BestSellerListItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,6 @@ class BestSellerListViewItem extends StatelessWidget {
                       style: Styles.textStyle20.copyWith(
                         fontFamily: kGtSectraFine,
                         overflow: TextOverflow.ellipsis,
-                        
                       ),
                       maxLines: 2,
                     ),
